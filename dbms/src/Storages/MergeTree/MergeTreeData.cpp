@@ -135,7 +135,7 @@ MergeTreeData::MergeTreeData(
     String version_file_path = full_path + "format_version.txt";
     if (!attach)
     {
-        format_version = 0;
+        format_version = 1;
         WriteBufferFromFile buf(version_file_path);
         writeIntText(format_version.toUnderType(), buf);
     }
